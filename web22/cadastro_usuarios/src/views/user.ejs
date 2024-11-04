@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Usuário</title>
+</head>
+<body>
+  <h1>Detalhes do Usuário</h1>
+  <ul>
+    <li>Nome: <%= user.nome %></li>
+    <li>CPF: <%= user.cpf %></li>
+    <li>Telefone: <%= user.telefone %></li>
+    <li>Email: <%= user.email %></li>
+    <li>Tipo: <%= user.tipo %></li>
+  </ul>
+  <a href="/<%= user.id %>/edit">Editar</a> <!-- Certifique-se de que o link esteja correto -->
+  <form action="/<%= user.id %>?_method=DELETE" method="POST">
+    <button type="submit">Excluir</button>
+  </form>
+  <a href="/">Voltar para Lista</a>
+</body>
+</html>
